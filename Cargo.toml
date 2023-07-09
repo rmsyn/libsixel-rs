@@ -1,0 +1,19 @@
+[package]
+name = "libsixel-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies.image]
+version = "0.24"
+optional = true
+
+[features]
+std = ["image"]
+e2e-tests = []
+
+[dev-dependencies.image]
+version = "0.24"
+
+[[example]]
+name = "encoder"
+path = "examples/encoder.rs"
