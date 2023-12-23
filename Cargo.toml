@@ -1,0 +1,34 @@
+[package]
+name = "libsixel-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["rmsyn <rmsynchls@gmail.com>"]
+repository = "https://github.com/rmsyn/libsixel-rs"
+categories = ["graphics", "rendering", "encoding"]
+description = "Sixel terminal-graphics protocol encoding"
+keywords = ["sixel", "tui", "terminal"]
+license = "GPL-3.0-only"
+
+[dependencies.hashbrown]
+version = "0.14"
+
+[dependencies.log]
+version = "0.4"
+
+[dependencies.image]
+version = "0.24"
+optional = true
+
+[features]
+std = ["image"]
+e2e-tests = []
+
+[dev-dependencies.env_logger]
+version = "0.10"
+
+[dev-dependencies.image]
+version = "0.24"
+
+[[example]]
+name = "encoder"
+path = "examples/encoder.rs"
